@@ -1,0 +1,119 @@
+<svg>
+    <defs>
+        <filter id="reflect">
+            <feGaussianBlur in="SourceGraphic" edgeMode="wrap" stdDeviation="2,1" result="blur4"/>
+            <feGaussianBlur in="blur4" edgeMode="wrap" stdDeviation="1,2" result="blur5"/>
+            <feSpecularLighting result="spec4" in="SourceGraphic" specularExponent="30" lighting-color="#ffffff10">
+                <fePointLight x="-20" y="-20" z="100"/>
+            </feSpecularLighting>
+            <feComposite in="blur5" in2="spec4" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+        </filter>
+        <filter id="chromatic-aberration" color-interpolation-filters="sRGB">
+            <feColorMatrix
+                    in="SourceGraphic"
+                    type="matrix"
+                    values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"
+            />
+            <feOffset dx="2" dy="0"/>
+            <feGaussianBlur stdDeviation="2" result="redChannel"/>
+
+            <feColorMatrix
+                    in="SourceGraphic"
+                    type="matrix"
+                    values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0"
+            />
+            <feOffset dx="2" dy="0"/>
+            <feGaussianBlur stdDeviation="0.5" result="greenChannel"/>
+
+            <feColorMatrix
+                    in="SourceGraphic"
+                    type="matrix"
+                    values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0"
+            />
+            <feGaussianBlur stdDeviation="2" result="blueChannel"/>
+
+            <feBlend
+                    in="redChannel"
+                    in2="greenChannel"
+                    mode="screen"
+                    result="redGreen"
+            />
+            <feBlend in="redGreen" in2="blueChannel" mode="screen"/>
+        </filter>
+        <filter id="distort">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1,2" edgeMode="wrap"
+                            result="feGaussianBlur-a95d582b"/>
+            <feGaussianBlur in="feGaussianBlur-a95d582b" stdDeviation="2,1" edgeMode="wrap"
+                            result="feGaussianBlur-8384c3d2"/>
+            <feTurbulence baseFrequency="0.001,0.001" stitchTiles="stitch"
+                          result="a95d582b-b790-45f7-88dc-0ce41bf612b3"/>
+            <feDisplacementMap scale="15" xChannelSelector="A" yChannelSelector="A"
+                               result="65d8088a-cd06-4721-b9d8-50e84ab39476" in="feGaussianBlur-8384c3d2"
+                               in2="a95d582b-b790-45f7-88dc-0ce41bf612b3"/>
+        </filter>
+        <filter id="refract">
+            <feTurbulence baseFrequency="0.001,0.001" result="a95d582b-b790-45f7-88dc-0ce41bf612b3"/>
+            <feDisplacementMap scale="15" xChannelSelector="A" yChannelSelector="A"
+                               result="65d8088a-cd06-4721-b9d8-50e84ab39476" in="SourceGraphic"
+                               in2="a95d582b-b790-45f7-88dc-0ce41bf612b3"/>
+        </filter>
+        <filter id="clear">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1,2" edgeMode="wrap"
+                            result="feGaussianBlur-8384c3d2"/>
+            <feTurbulence baseFrequency="0.001,0.001" result="a95d582b-b790-45f7-88dc-0ce41bf612b3"/>
+            <feDisplacementMap scale="10" xChannelSelector="A" yChannelSelector="A"
+                               result="65d8088a-cd06-4721-b9d8-50e84ab39476" in="feGaussianBlur-8384c3d2"
+                               in2="a95d582b-b790-45f7-88dc-0ce41bf612b3"/>
+        </filter>
+
+        <filter id="iridescent">
+            <feTurbulence baseFrequency="0.001,0.003" numOctaves="1"
+                          result="turbulence">
+            </feTurbulence>
+        </filter>
+        <filter id="reflective">
+            <feSpecularLighting result="specOut"
+                                specularExponent="25"
+                                lighting-color="#fff10">
+                <fePointLight x="75" y="75" z="200"/>
+            </feSpecularLighting>
+            <feComposite
+                    in="SourceGraphic"
+                    in2="specOut"
+                    operator="arithmetic"
+                    k1="0"
+                    k2="1"
+                    k3="1"
+                    k4="0"/>
+        </filter>
+        <filter id="water">
+            <feComponentTransfer result="feComponentTransfer-6bc108ba">
+                <feFuncR type="gamma" amplitude="0" exponent="0" offset="2"/>
+                <feFuncG type="gamma" amplitude="0" exponent="0" offset="0"/>
+                <feFuncB type="gamma" amplitude="0" exponent="0" offset="2"/>
+            </feComponentTransfer>
+            <feTurbulence type="turbulence" baseFrequency="0.001 0.001" numOctaves="1" seed="10"
+                          stitchTiles="noStitch" result="feTurbulence-c17771a6">
+            </feTurbulence>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0.05 1" edgeMode="wrap"
+                            result="feGaussianBlur-28ab4fb2"/>
+            <feOffset in="feComponentTransfer-6bc108ba" dx="2" dy="2" result="feOffset-78506106"/>
+
+            <feTurbulence type="turbulence" baseFrequency="0.0100" numOctaves="1" seed="10" stitchTiles="noStitch"
+                          result="feTurbulence-b20fc84f">
+            </feTurbulence>
+            <feComponentTransfer in="feTurbulence-b20fc84f" result="feComponentTransfer-light">
+                <feFuncB type="gamma" amplitude="2" exponent="0" offset="2"/>
+            </feComponentTransfer>
+
+            <feMerge>
+                <feMergeNode in="feOffset-78506106"/>
+                <feMergeNode in="feDisplacementMap-3a1ad413"/>
+                <feMergeNode in="feGaussianBlur-28ab4fb2"/>
+                <feMergeNode in="feComponentTransfer-light"/>
+            </feMerge>
+            <feDisplacementMap in="SourceGraphic" in2="feTurbulence-c17771a6" scale="100" xChannelSelector="R"
+                               yChannelSelector="G" result="feDisplacementMap-3a1ad413"/>
+        </filter>
+    </defs>
+</svg>
