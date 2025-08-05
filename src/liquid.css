@@ -13,6 +13,11 @@
         backdrop-filter: url(#chromatic-aberration) url(#distort);
     }
 
+    &.black-ice {
+        background-color: rgba(48, 49, 55, 0.7);
+        backdrop-filter: url(#chromatic-aberration) url(#distort);
+    }
+
     &.bubble {
         border: 1px solid;
         border-color: #e6e6e680 #c8c8c880 #aaaaaa80;
