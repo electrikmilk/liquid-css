@@ -20,6 +20,8 @@ It is not recommended to make a button out of glass, for example, unless it is p
 
 Ice gives an opaque, frosted/blurred, refractive chromatic aberrated backdrop filter meant for most materials, especially those on top of content, images, video, etc.
 
+For a darker background to the ice, use `.black-ice`.
+
 ### Bubble
 
 <img width="484" height="195" alt="Screenshot 2025-08-05 at 17 00 41" src="https://github.com/user-attachments/assets/1682276a-34e2-4112-857a-d59a85c27a52" />
@@ -31,3 +33,4 @@ Bubble is an opaque, iridescent, distorted backdrop filter, meant to be a fun ef
 <img width="447" height="227" alt="Screenshot 2025-08-05 at 17 01 02" src="https://github.com/user-attachments/assets/fd476c47-4104-4c8e-8dde-84e189e570f1" />
 
 Water is an animated, opaque, bluish, distorted backdrop filter, meant to be a fun effect on a material.
+
