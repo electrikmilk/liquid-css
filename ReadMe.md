@@ -46,20 +46,9 @@ Ice gives an opaque, frosted/blurred, refractive chromatic aberrated backdrop fi
 
 For a darker background to the ice, use `.black-ice`.
 
-### `.bubble`
-
-<img width="484" height="195" alt="Screenshot 2025-08-05 at 17 00 41" src="https://github.com/user-attachments/assets/1682276a-34e2-4112-857a-d59a85c27a52" />
-
-Bubble is an opaque, saturated, iridescent, distorted backdrop filter, meant to be a fun effect on a material.
-
-### `.water`
-
-<img width="447" height="227" alt="Screenshot 2025-08-05 at 17 01 02" src="https://github.com/user-attachments/assets/fd476c47-4104-4c8e-8dde-84e189e570f1" />
-
-Water is an animated, saturated, opaque, bluish, distorted backdrop filter, meant to be a fun effect on a material.
-
 ---
 
 Apply these classes individually to containers, buttons, etc., to get the same effects.
+
 
 
