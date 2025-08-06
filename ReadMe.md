@@ -6,6 +6,14 @@
 
 Refractive chromatic aberration effects in CSS.
 
+```console
+npm install liquid-css
+```
+
+```console
+yarn add liquid-css
+```
+
 ## Materials
 
 Liquid CSS works in CSS classes starting with `.material`. Most materials feature a gradient border from light to dark, a drop shadow, an inset glow, background blend darkening, and finally, rounding.
