@@ -1,5 +1,5 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/417b57a0-7b31-4a5f-84ec-9068f27884ea"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/ad34a1de-068f-41ea-87f6-f32a0d441cf2"/>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/34a7109d-6201-4f22-a5da-7fb535fb51ee"/>
   <img alt="Liquid CSS" src="https://github.com/user-attachments/assets/34a7109d-6201-4f22-a5da-7fb535fb51ee" width="300"/>
 </picture>
@@ -8,7 +8,7 @@ Refractive chromatic aberration effects in CSS.
 
 ## Materials
 
-Liquid CSS works in CSS classes starting with `.material`. Most liquid materials feature a gradient border from light to dark, drop shadow, inset glow, background blend darkening, and finally rounding.
+Liquid CSS works in CSS classes starting with `.material`. Most materials feature a gradient border from light to dark, a drop shadow, an inset glow, background blend darkening, and finally, rounding.
 
 ### `.glass`
 
@@ -41,3 +41,4 @@ Water is an animated, saturated, opaque, bluish, distorted backdrop filter, mean
 ---
 
 Apply these classes individually to containers, buttons, etc., to get the same effects.
+
