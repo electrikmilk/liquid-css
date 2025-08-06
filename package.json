@@ -1,7 +1,7 @@
 {
     "name": "liquid-css",
     "type": "module",
-    "description": "Refractive chromatic aberration materials in CSS.",
+    "description": "Refractive chromatic aberration effects in CSS.",
     "version": "1.0.0",
     "repository": {
         "type": "git",
