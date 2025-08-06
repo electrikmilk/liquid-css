@@ -6,12 +6,24 @@
 
 Refractive chromatic aberration effects in CSS.
 
+## Usage
+
+**NPM:**
+
 ```console
 npm install liquid-css
 ```
 
+**Yarn:**
+
 ```console
 yarn add liquid-css
+```
+
+**Import:**
+
+```javascript
+import 'liquid-css/src/main.js'
 ```
 
 ## Materials
@@ -49,4 +61,5 @@ Water is an animated, saturated, opaque, bluish, distorted backdrop filter, mean
 ---
 
 Apply these classes individually to containers, buttons, etc., to get the same effects.
+
 
