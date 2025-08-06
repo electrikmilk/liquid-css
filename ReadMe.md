@@ -42,7 +42,7 @@ It is not recommended to make a button out of glass, for example, unless it is p
 
 <img width="801" height="308" alt="Screenshot 2025-08-05 at 23 31 10" src="https://github.com/user-attachments/assets/2e8108a2-1909-42a1-953c-5436b81e0ca7" />
 
-Ice gives an opaque, saturated, frosted/blurred, refractive chromatic aberrated backdrop filter meant for most materials, especially those on top of content, images, video, etc.
+Ice gives an opaque, saturated, frosted/blurred, refractive chromatic aberrated backdrop filter meant for most materials, especially those with content, particularly text on top of them.
 
 For a darker background to the ice, use `.black-ice`.
 
@@ -51,3 +51,4 @@ For a darker background to the ice, use `.black-ice`.
 ---
 
 Apply these classes individually to containers, buttons, etc., to get the same effects.
+
