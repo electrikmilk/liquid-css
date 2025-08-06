@@ -23,7 +23,7 @@ yarn add liquid-css
 **Import:**
 
 ```javascript
-import 'liquid-css/src/main.js'
+import 'liquid-css'
 ```
 
 ## Materials
@@ -51,6 +51,7 @@ For a darker background to the ice, use `.black-ice`.
 ---
 
 Apply these classes individually to containers, buttons, etc., to get the same effects.
+
 
 
 
