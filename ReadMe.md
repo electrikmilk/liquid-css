@@ -34,7 +34,7 @@ Liquid CSS works in CSS classes starting with `.material`. Most materials featur
 
 <img width="442" height="174" alt="Screenshot 2025-08-05 at 17 02 39" src="https://github.com/user-attachments/assets/dc970f68-1587-40db-9e53-7ef570167f0a" />
 
-Glass gives an opaque, saturated, refractive, chromatic aberrated backdrop filter meant for materials where seeing through them is preferred. For example, a range slider could have a thumb made of glass.
+Glass gives a transparent, saturated, refractive, chromatic aberrated backdrop filter meant for materials where seeing through them is preferred. For example, a range slider could have a thumb made of glass.
 
 It is not recommended to make a button out of glass, for example, unless it is placed on top of a less transparent material, such as Ice.
 
@@ -42,13 +42,14 @@ It is not recommended to make a button out of glass, for example, unless it is p
 
 <img width="418" height="202" alt="Screenshot 2025-08-05 at 17 00 15" src="https://github.com/user-attachments/assets/2b8aa038-0fb7-4785-8b6f-c3156fb97827" />
 
-Ice gives an opaque, frosted/blurred, refractive chromatic aberrated backdrop filter meant for most materials, especially those on top of content, images, video, etc.
+Ice gives an opaque, saturated, frosted/blurred, refractive chromatic aberrated backdrop filter meant for most materials, especially those on top of content, images, video, etc.
 
 For a darker background to the ice, use `.black-ice`.
 
 ---
 
 Apply these classes individually to containers, buttons, etc., to get the same effects.
+
 
 
 
