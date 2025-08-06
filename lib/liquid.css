@@ -1,0 +1,65 @@
+.material {
+    transition: 0.3s ease all;
+    background-blend-mode: darken;
+    border: 1px solid;
+    background-color: transparent;
+    border-color: #99999980 #77777780 #55555580;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5),
+    inset 0 4px 1rem rgba(255, 255, 255, 0.3);
+    border-radius: 0.75rem;
+
+    &.glass {
+        background-color: rgba(243, 243, 243, 0.3);
+        backdrop-filter: url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"chromatic-aberration\" color-interpolation-filters=\"sRGB\">\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feOffset dx=\"2\" dy=\"0\"/>\
+        <feGaussianBlur stdDeviation=\"0\" result=\"redChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feOffset dx=\"1\" dy=\"0\"/>\
+        <feGaussianBlur stdDeviation=\"0\" result=\"greenChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0\" />\
+        <feGaussianBlur stdDeviation=\"0\" result=\"blueChannel\"/>\
+        <feBlend in=\"redChannel\" in2=\"greenChannel\" mode=\"screen\" result=\"redGreen\" />\
+        <feBlend in=\"redGreen\" in2=\"blueChannel\" mode=\"screen\"/>\
+        </filter>\
+        </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"refract\">\
+            <feTurbulence baseFrequency=\"0.001,0.001\" result=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+            <feDisplacementMap scale=\"15\" xChannelSelector=\"A\" yChannelSelector=\"A\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"SourceGraphic\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+            </filter>\
+        </defs></svg>#refract") saturate(180%);
+    }
+
+    &.ice, &.black-ice {
+        backdrop-filter: url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"chromatic-aberration\" color-interpolation-filters=\"sRGB\">\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feOffset dx=\"2\" dy=\"0\"/>\
+        <feGaussianBlur stdDeviation=\"2\" result=\"redChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feOffset dx=\"2\" dy=\"0\"/>\
+        <feGaussianBlur stdDeviation=\"0.5\" result=\"greenChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0\" />\
+        <feGaussianBlur stdDeviation=\"2\" result=\"blueChannel\"/>\
+        <feBlend in=\"redChannel\" in2=\"greenChannel\" mode=\"screen\" result=\"redGreen\" />\
+        <feBlend in=\"redGreen\" in2=\"blueChannel\" mode=\"screen\"/>\
+        </filter>\
+        </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+        <filter id=\"distort\">\
+        <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"1,2\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
+        <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"2,1\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
+        <feTurbulence baseFrequency=\"0.001,0.001\" stitchTiles=\"stitch\" result=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+        <feDisplacementMap scale=\"15\" xChannelSelector=\"A\" yChannelSelector=\"A\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"feGaussianBlur-8384c3d2\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+        </filter>\
+        </defs></svg>#distort") saturate(180%);
+    }
+
+    &.ice {
+        background-color: rgba(224, 233, 253, 0.7);
+    }
+
+    &.black-ice {
+        background-color: rgba(48, 49, 55, 0.7);
+    }
+}

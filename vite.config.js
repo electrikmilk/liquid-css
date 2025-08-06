@@ -1,9 +1,16 @@
-import { defineConfig } from 'vite';
-import viteSVG from 'vite-svg';
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
 export default defineConfig({
-    plugins: [
-        viteSVG({default: 'raw'})
-    ],
-});
+    build: {
+        assetsInlineLimit: 0,
+        lib: {
+            entry: resolve(__dirname, 'lib/main.js'),
+            name: 'LiquidCSS',
+            fileName: 'liquid-css'
+        }
+    }
+})

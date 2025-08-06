@@ -20,16 +20,19 @@
         "url": "https://github.com/electrikmilk/liquid-css/issues"
     },
     "homepage": "https://github.com/electrikmilk/liquid-css#readme",
-    "main": "./src/main.js",
+    "files": ["dist"],
+    "main": "./dist/liquid-css.umd.cjs",
+    "module": "./dist/liquid-css.js",
+    "exports": {
+        ".": "./dist/liquid-css.css"
+    },
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "build:watch": "vite build --watch"
     },
     "devDependencies": {
         "vite": "^7.0.4"
     },
-    "dependencies": {
-        "vite-svg": "^1.6.0"
-    }
+    "dependencies": {}
 }
