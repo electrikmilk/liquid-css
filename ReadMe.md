@@ -34,4 +34,6 @@ Bubble is an opaque, iridescent, distorted backdrop filter, meant to be a fun ef
 
 Water is an animated, opaque, bluish, distorted backdrop filter, meant to be a fun effect on a material.
 
-You could optionally apply these classes to your own containers to get the same effects with your own custom shadows, inner glow, border, etc.
+---
+
+You can also  apply these classes individually to your own containers, buttons, etc. to get the same effects with your own custom shadows, inner glow, border, etc.
