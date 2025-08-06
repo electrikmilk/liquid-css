@@ -1,5 +1,5 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/ad34a1de-068f-41ea-87f6-f32a0d441cf2"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/eb546714-bb4f-4818-b673-5b446102f13e"/>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/34a7109d-6201-4f22-a5da-7fb535fb51ee"/>
   <img alt="Liquid CSS" src="https://github.com/user-attachments/assets/34a7109d-6201-4f22-a5da-7fb535fb51ee" width="300"/>
 </picture>
@@ -65,5 +65,6 @@ For a darker background to the ice, use `.black-ice`.
 ---
 
 Apply these classes individually to containers, buttons, etc., to get the same effects.
+
 
 
