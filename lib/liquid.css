@@ -38,8 +38,10 @@
         </filter>\
         </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
             <filter id=\"refract\">\
-            <feTurbulence baseFrequency=\"0.001,0.001\" result=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
-            <feDisplacementMap scale=\"15\" xChannelSelector=\"A\" yChannelSelector=\"A\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"SourceGraphic\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+            <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"1,2\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
+            <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"2,1\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
+            <feTurbulence baseFrequency=\"0.001,0.001\" result=\"feGaussianBlur-8384c3d2\"/>\
+            <feDisplacementMap scale=\"5\" xChannelSelector=\"A\" yChannelSelector=\"A\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"SourceGraphic\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
             </filter>\
         </defs></svg>#refract") saturate(180%);
     }
@@ -60,8 +62,8 @@
         </filter>\
         </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
         <filter id=\"distort\">\
-        <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"1,2\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
-        <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"2,1\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
+        <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"3,5\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
+        <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"5,3\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
         <feTurbulence baseFrequency=\"0.001,0.001\" stitchTiles=\"stitch\" result=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
         <feDisplacementMap scale=\"15\" xChannelSelector=\"A\" yChannelSelector=\"A\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"feGaussianBlur-8384c3d2\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
         </filter>\
