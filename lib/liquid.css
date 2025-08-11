@@ -1,12 +1,25 @@
 .material {
     transition: 0.3s ease all;
     background-blend-mode: darken;
-    border: 1px solid;
     background-color: transparent;
-    border-color: #99999980 #77777780 #55555580;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5),
+    border: none;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3),
     inset 0 4px 1rem rgba(255, 255, 255, 0.3);
     border-radius: 0.75rem;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        padding: 0.05rem;
+        border-radius: 0.75rem;
+        background: linear-gradient(332deg,rgba(255, 255, 255, 0.71) 1%, rgba(217, 217, 217, 0) 23%, rgba(222, 222, 222, 0) 73%, rgba(255, 255, 255, 0.68) 100%);
+        mask:
+                linear-gradient(#000 0 0) exclude,
+                linear-gradient(#000 0 0) content-box;
+
+    }
 
     &.glass {
         background-color: rgba(243, 243, 243, 0.3);
