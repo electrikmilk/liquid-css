@@ -12,13 +12,11 @@
         position: absolute;
         z-index: -1;
         inset: 0;
-        padding: 0.05rem;
+        padding: 0.13rem;
         border-radius: 0.75rem;
-        background: linear-gradient(332deg,rgba(255, 255, 255, 0.71) 1%, rgba(217, 217, 217, 0) 23%, rgba(222, 222, 222, 0) 73%, rgba(255, 255, 255, 0.68) 100%);
-        mask:
-                linear-gradient(#000 0 0) exclude,
-                linear-gradient(#000 0 0) content-box;
-
+        background: linear-gradient(332deg, rgba(255, 255, 255, 0.3) 1%, rgba(217, 217, 217, 0.5) 23%, rgba(222, 222, 222, 0.5) 73%, rgba(255, 255, 255, 0.3) 100%);
+        mask: linear-gradient(#000000 0 0) exclude,
+        linear-gradient(#000000 0 0) content-box;
     }
 
     &.glass {
