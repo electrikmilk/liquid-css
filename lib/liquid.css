@@ -4,7 +4,7 @@
     background-color: transparent;
     border: none;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3),
-    inset 0 4px 1rem rgba(255, 255, 255, 0.3);
+    inset 0 4px 0.5rem rgba(255, 255, 255, 0.3);
     border-radius: 0.75rem;
 
     &:before {
