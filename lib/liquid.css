@@ -99,4 +99,18 @@
     &.black-ice {
         background-color: rgba(48, 49, 55, 0.7);
     }
+
+    .interactive {
+        transition: all 0.3s;
+
+        &:hover {
+            filter: brightness(110%);
+            transition: all 0.3s;
+        }
+
+        &:focus {
+            box-shadow: 0 0.3rem 1rem rgba(0,0,0,.3);
+            transition: all 0.3s;
+        }
+    }
 }
