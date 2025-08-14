@@ -38,7 +38,7 @@
             <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"1,2\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
             <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"2,1\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
             <feTurbulence baseFrequency=\"0.01,0.001\" result=\"feGaussianBlur-8384c3d2\"/>\
-            <feDisplacementMap scale=\"5\" xChannelSelector=\"R\" yChannelSelector=\"B\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"SourceGraphic\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+            <feDisplacementMap scale=\"7\" xChannelSelector=\"R\" yChannelSelector=\"B\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"SourceGraphic\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
             </filter>\
         </defs></svg>#refract") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
             <filter id=\"reflect\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
