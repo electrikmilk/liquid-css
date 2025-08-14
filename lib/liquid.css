@@ -3,8 +3,7 @@
     background-blend-mode: darken;
     background-color: transparent;
     border: none;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3),
-    inset 0 4px 0.5rem rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
     border-radius: 0.75rem;
 
     &:before {
@@ -12,9 +11,9 @@
         position: absolute;
         z-index: -1;
         inset: 0;
-        padding: 0.13rem;
+        padding: 0.10rem;
         border-radius: 0.75rem;
-        background: linear-gradient(332deg, rgba(255, 255, 255, 0.3) 1%, rgba(217, 217, 217, 0.5) 23%, rgba(222, 222, 222, 0.5) 73%, rgba(255, 255, 255, 0.3) 100%);
+        background: linear-gradient(332deg, rgba(255, 255, 255, 0.5) 1%, rgba(217, 217, 217, 0.3) 23%, rgba(222, 222, 222, 0.3) 73%, rgba(255, 255, 255, 0.5) 100%);
         mask: linear-gradient(#000000 0 0) exclude,
         linear-gradient(#000000 0 0) content-box;
     }
@@ -35,18 +34,25 @@
         <feBlend in=\"redGreen\" in2=\"blueChannel\" mode=\"screen\"/>\
         </filter>\
         </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
-            <filter id=\"refract\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\
+            <filter id=\"refract\">\
+            <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"1,5\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
+            <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"5,1\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
+            <feTurbulence baseFrequency=\"0.0001,0.01\" result=\"feGaussianBlur-8384c3d2\"/>\
+            <feDisplacementMap scale=\"2\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"SourceGraphic\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+            </filter>\
+        </defs></svg>#refract") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"reflect\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
             <feTurbulence type=\"fractalNoise\" baseFrequency=\"0.001 0.01\" numOctaves=\"1\" seed=\"5\" stitchTiles=\"noStitch\" result=\"feTurbulence-3ec91c54\"></feTurbulence>\
-            <feDisplacementMap in=\"SourceGraphic\" in2=\"feTurbulence-3ec91c54\" scale=\"180\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"feDisplacementMap-d9783c91\"></feDisplacementMap>\
-            <feGaussianBlur stdDeviation=\"5 0\" edgeMode=\"wrap\" result=\"feGaussianBlur-1c78025c\"></feGaussianBlur>\
-            <feGaussianBlur stdDeviation=\"0 5\" edgeMode=\"wrap\" result=\"feGaussianBlur-8c23ff82\"></feGaussianBlur>\
+            <feDisplacementMap in=\"SourceGraphic\" in2=\"feTurbulence-3ec91c54\" scale=\"80\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"feDisplacementMap-d9783c91\"></feDisplacementMap>\
+            <feGaussianBlur stdDeviation=\"7 0\" edgeMode=\"wrap\" result=\"feGaussianBlur-1c78025c\"></feGaussianBlur>\
+            <feGaussianBlur stdDeviation=\"0 7\" edgeMode=\"wrap\" result=\"feGaussianBlur-8c23ff82\"></feGaussianBlur>\
             <feComposite in=\"feDisplacementMap-d9783c91\" in2=\"SourceGraphic\" operator=\"xor\" result=\"feComposite-ea7bd98b\"></feComposite>\
             <feComposite in=\"feGaussianBlur-8c23ff82\" in2=\"feGaussianBlur-1c78025c\" operator=\"xor\" result=\"feComposite-4f98e060\"></feComposite>\
             <feComposite in=\"SourceGraphic\" in2=\"feComposite-ea7bd98b\" operator=\"atop\" result=\"feComposite-628218f3\"></feComposite>\
             <feComposite in=\"feComposite-628218f3\" in2=\"feComposite-4f98e060\" operator=\"atop\" result=\"feComposite-196f967f\"></feComposite>\
-            <feComposite in=\"feComposite-196f967f\" operator=\"over\"></feComposite>\
+            <feComposite in=\"feComposite-196f967f\" in2=\"SourceGraphic\" operator=\"over\"></feComposite>\
         </filter>\
-        </defs></svg>#refract") saturate(180%);
+        </defs></svg>#reflect") saturate(180%);
     }
 
     &.ice, &.black-ice {
@@ -64,7 +70,14 @@
         <feBlend in=\"redGreen\" in2=\"blueChannel\" mode=\"screen\"/>\
         </filter>\
         </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
-            <filter id=\"refract\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\
+            <filter id=\"refract\">\
+            <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"1,5\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
+            <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"5,1\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
+            <feTurbulence baseFrequency=\"0.0001,0.01\" result=\"feGaussianBlur-8384c3d2\"/>\
+            <feDisplacementMap scale=\"2\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"SourceGraphic\" in2=\"a95d582b-b790-45f7-88dc-0ce41bf612b3\"/>\
+            </filter>\
+        </defs></svg>#refract") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"reflect\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
             <feTurbulence type=\"fractalNoise\" baseFrequency=\"0.001 0.01\" numOctaves=\"1\" seed=\"5\" stitchTiles=\"noStitch\" result=\"feTurbulence-3ec91c54\"></feTurbulence>\
             <feDisplacementMap in=\"SourceGraphic\" in2=\"feTurbulence-3ec91c54\" scale=\"120\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"feDisplacementMap-d9783c91\"></feDisplacementMap>\
             <feGaussianBlur stdDeviation=\"5 0\" edgeMode=\"wrap\" result=\"feGaussianBlur-1c78025c\"></feGaussianBlur>\
@@ -76,7 +89,7 @@
             <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"3\" result=\"frosted\"></feGaussianBlur>\
             <feComposite in2=\"frosted\" in=\"feComposite-196f967f\" operator=\"over\"></feComposite>\
         </filter>\
-        </defs></svg>#refract") saturate(180%);
+        </defs></svg>#reflect") saturate(180%);
     }
 
     &.ice {
