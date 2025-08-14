@@ -43,7 +43,7 @@
         </defs></svg>#refract") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
             <filter id=\"reflect\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
             <feTurbulence type=\"fractalNoise\" baseFrequency=\"0.001 0.01\" numOctaves=\"1\" seed=\"5\" stitchTiles=\"noStitch\" result=\"feTurbulence-3ec91c54\"></feTurbulence>\
-            <feDisplacementMap in=\"SourceGraphic\" in2=\"feTurbulence-3ec91c54\" scale=\"120\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"feDisplacementMap-d9783c91\"></feDisplacementMap>\
+            <feDisplacementMap in=\"SourceGraphic\" in2=\"feTurbulence-3ec91c54\" scale=\"80\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"feDisplacementMap-d9783c91\"></feDisplacementMap>\
             <feGaussianBlur stdDeviation=\"7 0\" edgeMode=\"wrap\" result=\"feGaussianBlur-1c78025c\"></feGaussianBlur>\
             <feGaussianBlur stdDeviation=\"0 7\" edgeMode=\"wrap\" result=\"feGaussianBlur-8c23ff82\"></feGaussianBlur>\
             <feComposite in=\"feDisplacementMap-d9783c91\" in2=\"SourceGraphic\" operator=\"xor\" result=\"feComposite-ea7bd98b\"></feComposite>\
