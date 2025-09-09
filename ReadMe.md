@@ -6,6 +6,8 @@
 
 Refractive chromatic aberration effects in CSS.
 
+Note that only Chrome-based browsers support this for now.
+
 ## Usage
 
 **NPM:**
